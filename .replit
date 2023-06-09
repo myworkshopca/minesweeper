@@ -1,3 +1,2 @@
 language = "python3"
 run = "python3 game.py"
-onBoot = "python3 game.py"
