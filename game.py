@@ -117,12 +117,12 @@ def colordict():
             #curses.init_pair(i + 1, i, 241)
 
     return {
-        "cover": curses.color_pair(9), # grey
-        "flag": curses.color_pair(12), # yellow
+        "cover": curses.color_pair(16), # 9: grey, 16:white
+        "flag": curses.color_pair(227), # 12, 227, yellow
         "blasted": curses.color_pair(233),
         #"-1": curses.color_pair(16),
         "-1": curses.color_pair(53),
-        "0": curses.color_pair(1), 
+        "0": curses.color_pair(239), # 1, 190
         "1": curses.color_pair(13), # blue
         "2": curses.color_pair(48), # Green
         "3": curses.color_pair(10), # red
@@ -140,7 +140,7 @@ and the cell status: covered, revealed, flagged.
 hare are list of characters we can use.
  ✸ 10040 ❂ 10050 ✹ 10041 ❄ 10052 ❋ 10059
  █ 9608 ◼ 9724
- ⚑ 9873
+ ⚑ 9873 ☂ 9730
 """
 def paintcell(stdscr, cell, colors, reverse=False, show=False):
 
@@ -157,7 +157,8 @@ def paintcell(stdscr, cell, colors, reverse=False, show=False):
         cell_ch = chr(9608)
         cell_color = colors['cover']
     elif status == 'flagged':
-        cell_ch = chr(9873)
+        #cell_ch = chr(9873)
+        cell_ch = chr(9730)
         cell_color = colors['flag']
     elif status == 'blasted':
         cell_ch = chr(10041)
