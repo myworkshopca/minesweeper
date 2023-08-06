@@ -147,9 +147,11 @@ def paintcell(stdscr, cell, colors, reverse=False, show=False):
     # check if need show all
     if show and cell[3] == 'covered':
         # set the status to revealed for all covered cells.
-        status = "revealed"
-    else:
-        status = cell[3]
+        #status = "revealed"
+        # update cell status to revealed.
+        cell[3] = "revealed"
+
+    status = cell[3]
 
     # get the character for the cell based on the cell's status.
     # cell's status stored as the 3rd item.
