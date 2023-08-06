@@ -123,7 +123,8 @@ def colordict():
         #"-1": curses.color_pair(16),
         "-1": curses.color_pair(53),
         "0": curses.color_pair(239), # 1, 190
-        "1": curses.color_pair(13), # blue
+        #"1": curses.color_pair(13), # blue
+        "1": curses.color_pair(14), # blue
         "2": curses.color_pair(48), # Green
         "3": curses.color_pair(10), # red
         "4": curses.color_pair(52), # 
