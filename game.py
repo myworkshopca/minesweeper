@@ -156,11 +156,12 @@ def paintcell(stdscr, cell, colors, reverse=False, show=False):
     # get the character for the cell based on the cell's status.
     # cell's status stored as the 3rd item.
     if status == 'covered':
-        cell_ch = chr(9608)
+        #cell_ch = chr(9608)
+        cell_ch = chr(9639)
         cell_color = colors['cover']
     elif status == 'flagged':
-        #cell_ch = chr(9873)
-        cell_ch = chr(9730)
+        cell_ch = chr(9873)
+        #cell_ch = chr(9730)
         cell_color = colors['flag']
     elif status == 'blasted':
         cell_ch = chr(10041)
